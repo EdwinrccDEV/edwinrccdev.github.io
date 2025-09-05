@@ -201,11 +201,12 @@ body {
   color: cyan;
 }
 input[type=range] {
-  -webkit-appearance: none; /* Chrome/Safari */
+  -webkit-appearance: none;
   width: 300px;
   height: 8px;
   background: rgb(0, 0, 20);
   border-radius: 4px;
+  border: 2px solid cyan; /* <-- Borde para ver los límites */
   outline: none;
 }
 
