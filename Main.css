@@ -188,5 +188,6 @@ body {
   border-radius: 5px;
   margin-top: 15px;
 }
-
-
+#bgMusic {
+  border: solid 5px cyan;
+}
