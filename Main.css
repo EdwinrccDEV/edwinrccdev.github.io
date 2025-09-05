@@ -189,5 +189,7 @@ body {
   margin-top: 15px;
 }
 #bgMusic {
-  border: solid 5px cyan;
+  border: solid 2px cyan;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
 }
