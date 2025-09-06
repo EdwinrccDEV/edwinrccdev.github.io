@@ -1,2 +1,4 @@
-# edwinrccdev.github.io
-my website
+# My personal website
+https://edwinrccdev.github.io/
+
+This page will be a very big thinh
