@@ -25,7 +25,7 @@ volumenSlider.addEventListener('input', () => {
 selector.addEventListener('change', () => {
   audio.src = selector.value;
   audio.play();
-  playPauseBtn.textContent = 'Pausar';
+  playPauseBtn.textContent = 'Pause';
 });
 
 // Formatear tiempo mm:ss
