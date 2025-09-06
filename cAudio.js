@@ -9,10 +9,10 @@ const progressBar = document.getElementById('progressBar');
 playPauseBtn.addEventListener('click', () => {
   if (audio.paused) {
     audio.play();
-    playPauseBtn.textContent = 'Pausar';
+    playPauseBtn.textContent = 'Pause';
   } else {
     audio.pause();
-    playPauseBtn.textContent = 'Reproducir';
+    playPauseBtn.textContent = 'Reproduce';
   }
 });
 
