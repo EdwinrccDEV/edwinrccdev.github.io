@@ -275,7 +275,7 @@ input[type=range]::-ms-thumb {
   border: solid 2px cyan;
   border-radius: 5px;
     background-color: rgb(0, 0, 20);
-  padding: 5px 5px 5px 5px;
+  padding: 4px 4px 4px 4px;
   color: cyan;
 }
 
