@@ -3,6 +3,7 @@ const playPauseBtn = document.getElementById('playPauseBtn');
 const volumenSlider = document.getElementById('volumen');
 const selector = document.getElementById('currentSong');
 const timeDisplay = document.getElementById('timeDisplay');
+const progressBar = document.getElementById('progressBar');
 
 // Play / Pause
 playPauseBtn.addEventListener('click', () => {
@@ -34,12 +35,19 @@ function formatTime(seconds) {
   return `${m}:${s}`;
 }
 
-// Mostrar duración total cuando carga metadata
+// Cuando carga metadata, fijar duración y max del slider
 audio.addEventListener('loadedmetadata', () => {
+  progressBar.max = audio.duration;
   timeDisplay.textContent = `00:00 / ${formatTime(audio.duration)}`;
 });
 
-// Actualizar tiempo actual
+// Actualizar progreso mientras suena
 audio.addEventListener('timeupdate', () => {
+  progressBar.value = audio.currentTime;
   timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+});
+
+// Adelantar/retroceder con el slider
+progressBar.addEventListener('input', () => {
+  audio.currentTime = progressBar.value;
 });
