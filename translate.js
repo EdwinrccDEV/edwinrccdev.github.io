@@ -1,3 +1,4 @@
+// Terminar esta cosa
 function geteleid(item1, data2) {
   document.getElementById(item1).innerText = data2;
 }
