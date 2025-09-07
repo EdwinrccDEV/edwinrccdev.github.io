@@ -4,6 +4,17 @@ const volumenSlider = document.getElementById('volumen');
 const selector = document.getElementById('currentSong');
 const timeDisplay = document.getElementById('timeDisplay');
 const progressBar = document.getElementById('progressBar');
+const loopBtn = document.getElementById('loopBtn');
+
+// Estado inicial
+audio.loop = false;
+
+// Click en botón loop
+loopBtn.addEventListener('click', () => {
+  audio.loop = !audio.loop; // cambia true/false
+  loopBtn.textContent = audio.loop ? 'Loop: ON' : 'Loop: OFF';
+});
+
 
 // Play / Pause
 playPauseBtn.addEventListener('click', () => {
