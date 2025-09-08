@@ -254,11 +254,8 @@ body {
   border-radius: 3px;
   background-color: rgb(0, 0, 20);
   color: cyan;
-  display: flex;
-  justify-content: center; 
-  align-items: center;    
-  margin-left: 40%;
-  font-size: 30px;
+  margin: 0 auto;
+  font-size: 25px;
   margin-bottom: 20px;
 }
 
