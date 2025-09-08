@@ -232,15 +232,21 @@ body {
 }
 
 
+/* Thumb */
 #bgMusic input[type=range]::-webkit-slider-thumb,
 #bgMusic input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  background: cyan;
+  width: 18px;
+  height: 18px;
+  background: cyan;         /* color fuerte */
   border: 2px solid #00ffff;
   border-radius: 50%;
-  margin-top: -6px; 
+  cursor: pointer;
+}
+
+/* (para centrar bien en WebKit) */
+#bgMusic input[type=range]::-webkit-slider-thumb {
+  margin-top: -5px;
 }
 
 
