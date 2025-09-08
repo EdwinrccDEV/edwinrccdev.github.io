@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Missing Number Finder</title>
+<link rel="stylesheet" href="mycss.css">
+  </head>
+  <body>
+      <h1 class="title">Missing Number Finder! </h1>
+      <p>Number 1</p>
+      <input type="number" placeholder="10" id="nmb1" class="UI"  required>
+      <p>Operation</p>
+      <select id="prtn" class="UI">
+      <option value="+">Add + </option>
+      <option value="-">Subtract - </option>
+      <option value="x">Multiply x </option>
+      <option value="/">Divide / </option>
+      </select>
+      <p>Result</p>
+      <input type="number" placeholder="100" id="rslt" class="UI" required><br>
+      <button onclick="findMNum()" class="UI">FIND!</button>
+      <p id="currOpe">Operation will apper here</p>
+      <p id="qawsed">Result will apper here</p>
+       <script src="data.js"></script>
+  </body>
+
+</html>
