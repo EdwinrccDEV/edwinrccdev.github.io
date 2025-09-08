@@ -1,0 +1,37 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 3%;
+  padding-top: 10%;
+  text-align: center;
+  background-color: rgb(5, 0, 20);
+  color: rgb(0, 255, 255);
+}
+.UI {
+  background-color: rgba(7, 0, 100, 0.5);
+  color: rgb(0, 255, 255);
+  border: 1px solid cyan;
+  font-size: 20px;
+  padding: 5px 5px 5px 5px;
+    border-radius: 2px;
+}
+#rslt {
+  margin-bottom: 15px;
+}
+input::placeholder{
+  color: rgba(0, 247, 255, 0.350);
+}
+p{
+  font-size: 20px;
+}
+#qawsed {
+    border-radius: 2px;
+  border: 2px solid cyan;
+  padding: 10px 10px 10px 10px;
+   background-color: rgba(7, 0, 100, 0.5);
+}
+#currOpe{
+    border-radius: 2px;
+    border: 2px solid cyan;
+  padding: 10px 10px 10px 10px;
+   background-color: rgba(7, 0, 100, 0.5);
+}
