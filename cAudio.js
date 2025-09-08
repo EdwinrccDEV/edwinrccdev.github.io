@@ -5,6 +5,25 @@ const selector = document.getElementById('currentSong');
 const timeDisplay = document.getElementById('timeDisplay');
 const progressBar = document.getElementById('progressBar');
 const loopBtn = document.getElementById('loopBtn');
+const voicesBtn = document.getElementById('voicesBtn');
+let voicesOn = false;
+
+voicesBtn.addEventListener('click', () => {
+  voicesOn = !voicesOn;
+  voicesBtn.textContent = voicesOn ? 'Voces: ON' : 'Voces: OFF';
+
+  // agarramos la canción actual
+  let current = selector.value; // ej: songs/song1.ogg
+
+  // quitamos el ".ogg" y añadimos el sufijo
+  let baseName = current.replace('.ogg', '');
+  let newSrc = voicesOn ? `${baseName}wvoices.ogg` : `${baseName}.ogg`;
+
+  audio.src = newSrc;
+  audio.play();
+  playPauseBtn.textContent = 'Pausar';
+});
+
 
 // Estado inicial
 audio.loop = false;
