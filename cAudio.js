@@ -6,34 +6,14 @@ const timeDisplay = document.getElementById('timeDisplay');
 const progressBar = document.getElementById('progressBar');
 const loopBtn = document.getElementById('loopBtn');
 const voicesBtn = document.getElementById('voicesBtn');
+
 let voicesOn = false;
 
-voicesBtn.addEventListener('click', () => {
-  voicesOn = !voicesOn;
-  voicesBtn.textContent = voicesOn ? 'Voces: ON' : 'Voces: OFF';
-
-  // agarramos la canción actual
-  let current = selector.value; // ej: songs/song1.ogg
-
-  // quitamos el ".ogg" y añadimos el sufijo
-  let baseName = current.replace('.ogg', '');
-  let newSrc = voicesOn ? `${baseName}wvoices.ogg` : `${baseName}.ogg`;
-
-  audio.src = newSrc;
-  audio.play();
-  playPauseBtn.textContent = 'Pausar';
-});
-
-
-// Estado inicial
-audio.loop = false;
-
-// Click en botón loop
-loopBtn.addEventListener('click', () => {
-  audio.loop = !audio.loop; // cambia true/false
-  loopBtn.textContent = audio.loop ? 'Loop: ON' : 'Loop: OFF';
-});
-
+// Función que devuelve la ruta correcta según vocesOn
+function getSongPath(base) {
+  let baseName = base.replace('.ogg', '');
+  return voicesOn ? `${baseName}wvoices.ogg` : `${baseName}.ogg`;
+}
 
 // Play / Pause
 playPauseBtn.addEventListener('click', () => {
@@ -53,7 +33,24 @@ volumenSlider.addEventListener('input', () => {
 
 // Cambio de canción
 selector.addEventListener('change', () => {
-  audio.src = selector.value;
+  audio.src = getSongPath(selector.value);
+  audio.play();
+  playPauseBtn.textContent = 'Pause';
+});
+
+// Loop
+loopBtn.addEventListener('click', () => {
+  audio.loop = !audio.loop;
+  loopBtn.textContent = audio.loop ? 'Loop: ON' : 'Loop: OFF';
+});
+
+// Voces toggle
+voicesBtn.addEventListener('click', () => {
+  voicesOn = !voicesOn;
+  voicesBtn.textContent = voicesOn ? 'Voices: ON' : 'Voices: OFF';
+
+  // cambiar la canción actual al instante
+  audio.src = getSongPath(selector.value);
   audio.play();
   playPauseBtn.textContent = 'Pause';
 });
@@ -65,19 +62,19 @@ function formatTime(seconds) {
   return `${m}:${s}`;
 }
 
-// Cuando carga metadata, fijar duración y max del slider
+// Metadata cargada
 audio.addEventListener('loadedmetadata', () => {
   progressBar.max = audio.duration;
   timeDisplay.textContent = `00:00 / ${formatTime(audio.duration)}`;
 });
 
-// Actualizar progreso mientras suena
+// Actualizar progreso
 audio.addEventListener('timeupdate', () => {
   progressBar.value = audio.currentTime;
   timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
 });
 
-// Adelantar/retroceder con el slider
+// Slider para adelantar/retroceder
 progressBar.addEventListener('input', () => {
   audio.currentTime = progressBar.value;
 });
