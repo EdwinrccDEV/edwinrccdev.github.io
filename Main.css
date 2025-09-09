@@ -1,1 +1,22 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid cyan;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  background: rgb(0, 0, 20);
+  color: cyan;
+  transition: all 0.3s ease; 
+}
 
+.card:hover {
+  box-shadow: 0 0 15px cyan;
+  transform: scale(1.03);  
+}
+
+.card-icon i {
+  font-size: 24px;
+  color: cyan;
+}
