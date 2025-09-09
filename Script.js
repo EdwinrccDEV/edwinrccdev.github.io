@@ -19,8 +19,6 @@ function textType(texting, time, idele) {
 textType("Edwin's Hub", 100, "title");
 textType("Just a Random Person.", 50, "sub");
 textType("My Digital World is Right Here.", 50, "sub2");
-textType("Edwin's Hub.", 50, "maint");
-
 
 function nullest() {
 alert("Nuh Uh");
