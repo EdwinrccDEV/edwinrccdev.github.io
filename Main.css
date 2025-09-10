@@ -1,1 +1,44 @@
-.card { display: flex; justify-content: space-between; align-items: center; border: 2px solid; border-image: linear-gradient(90deg, cyan, magenta) 1; border-radius: 8px; padding: 20px; margin: 30px 30px; background: rgb(0, 0, 20); color: cyan; transition: all 0.3s ease; font-size: 20px; } .card:hover { box-shadow: 0 0 15px cyan; transform: scale(1.015); } .card-icon i { font-size: 40px; color: cyan; padding-right: 25px; } body { background: rgb(0, 0, 20); font-family: arial; }
+:root {
+  --card-bg: rgb(0, 0, 20);
+  --card-color: cyan;
+  --card-gradient: linear-gradient(90deg, cyan, magenta);
+  --transition-speed: 0.3s;
+}
+
+body {
+  background: var(--card-bg);
+  font-family: Arial, sans-serif;
+  font-size: 16px; 
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 0.125rem solid;
+  border-image: var(--card-gradient) 1;
+  border-radius: 0.5rem;
+
+  padding: 1.25rem; 
+  margin: 2rem 5%;  
+  background: var(--card-bg);
+  color: var(--card-color);
+  font-size: 1.25rem; 
+
+  transition: all var(--transition-speed) ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 1rem var(--card-color);
+  transform: scale(1.02);
+}
+
+
+.card-icon i {
+  font-size: 2.5rem; 
+  color: var(--card-color);
+  padding-right: 1.5rem; 
+}
