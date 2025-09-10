@@ -5,7 +5,7 @@
   border: 2px solid cyan;
   border-radius: 8px;
   padding: 10px;
-  margin: 20px 0;
+  margin: 30px 30px;
   background: rgb(0, 0, 20);
   color: cyan;
   transition: all 0.3s ease; 
@@ -19,6 +19,7 @@
 .card-icon i {
   font-size: 24px;
   color: cyan;
+  padding-right: 25px;
 }
 body {
 background: rgb(0, 0, 20);
