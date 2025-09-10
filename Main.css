@@ -9,6 +9,8 @@
   background: rgb(0, 0, 20);
   color: cyan;
   transition: all 0.3s ease; 
+    text-align: center;
+  font-size: 25px;
 }
 
 .card:hover {
