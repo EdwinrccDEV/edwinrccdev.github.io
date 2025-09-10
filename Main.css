@@ -4,13 +4,12 @@
   align-items: center;
   border: 2px solid cyan;
   border-radius: 8px;
-  padding: 10px;
+  padding: 20px;
   margin: 30px 30px;
   background: rgb(0, 0, 20);
   color: cyan;
   transition: all 0.3s ease; 
-    text-align: center;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .card:hover {
