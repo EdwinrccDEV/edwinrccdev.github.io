@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid cyan;
+  border: 2px solid;
+  border-image: linear-gradient(90deg, cyan, magenta) 1;
   border-radius: 8px;
   padding: 20px;
   margin: 30px 30px;
