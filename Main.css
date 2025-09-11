@@ -41,6 +41,7 @@ body {
   font-size: 2.5rem; 
   color: var(--card-color);
   padding-right: 1.5rem; 
+  linear-gradient(90deg, purple, magenta);
 }
 
 #tname {
