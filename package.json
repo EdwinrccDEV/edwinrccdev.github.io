@@ -1,0 +1,26 @@
+{
+  "name": "Edwin's Hub",
+  "version": "1.0.0",
+  "description": "A personal website.",
+  "main": "index.html",
+  "author": "Edwin",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node index.html",
+    "dev": "nodemon index.html",
+    "test": "echo \"No tests yet\"",
+    "build": "echo \"Buildind...\""
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "eslint": "^8.46.0"
+  },
+  "keywords": ["web", "node"]
+}
