@@ -53,6 +53,13 @@ body {
   letter-spacing: 0.1rem; /* un poco más de aire en las letras */
 }
 
+button {
+ background: rgb(0, 0, 20);
+border: 2px solid cyan; 
+border-radius: 0.5rem;
+  color: cyan;
+}
+
 /* Estilo general del range */
 input[type="range"] {
   -webkit-appearance: none; /* quitar estilo por defecto en Chrome/Safari */
