@@ -58,6 +58,14 @@ button {
 border: 2px solid cyan; 
 border-radius: 0.5rem;
   color: cyan;
+  padding: 0.5rem; 
+}
+select {
+ background: rgb(0, 0, 20);
+border: 2px solid cyan; 
+border-radius: 0.5rem;
+  color: cyan;
+  padding: 0.5rem; 
 }
 
 /* Estilo general del range */
