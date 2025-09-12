@@ -17,11 +17,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   border: 0.125rem solid;
   border-image: var(--card-gradient) 1;
   border-radius: 0.5rem;
-
   padding: 1.25rem; 
   margin: 2rem 5%;  
   background: var(--card-bg);
@@ -48,12 +46,69 @@ body {
   font-size: 3rem; /* texto grande (48px aprox) */
   font-weight: bold;
   text-align: center;
-
   background: linear-gradient(90deg, cyan, magenta);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   margin: 20vh 5% 10vh; /* margen grande para centrar en pantalla */
-  
   letter-spacing: 0.1rem; /* un poco más de aire en las letras */
+}
+
+/* Estilo general del range */
+input[type="range"] {
+  -webkit-appearance: none; /* quitar estilo por defecto en Chrome/Safari */
+  width: 100%;
+  height: 8px;
+  background: rgb(0, 0, 20); /* fondo oscuro */
+  border: 2px solid cyan;   /* borde cyan */
+  border-radius: 5px;
+  outline: none;
+  margin-top: 5px;
+}
+
+/* Thumb en Chrome/Safari */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: cyan;       /* bola cyan */
+  border-radius: 50%;     /* circular */
+  cursor: pointer;
+  border: 2px solid white;
+  transition: transform 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);  /* aumenta al hover */
+}
+
+/* Thumb en Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: cyan;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: transform 0.2s;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Track en Firefox */
+input[type="range"]::-moz-range-track {
+  background: rgb(0, 0, 20);
+  border: 2px solid cyan;
+  border-radius: 5px;
+}
+
+/* Track en IE */
+input[type="range"]::-ms-track {
+  background: rgb(0, 0, 20);
+  border: 2px solid cyan;
+  border-radius: 5px;
+  height: 8px;
+  cursor: pointer;
 }
