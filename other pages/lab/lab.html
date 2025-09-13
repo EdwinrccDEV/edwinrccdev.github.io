@@ -18,44 +18,6 @@
   </div>
 </div>
 
-                <div class="card" id="musicCard">
-  <div class="card-text">
-    <h3>Music</h3>
-    <p>Play background music</p>
-    <!-- Mini reproductor dentro de la tarjeta -->
-    <select id="currentSong">
-      <option value="songs/song1.ogg">Song 1</option>    
-      <option value="songs/song2.ogg">Song 2</option>
-      <option value="songs/song3.ogg">Song 3</option>    
-      <option value="songs/song4.ogg">Song 4</option>
-      <option value="songs/song5.ogg">Song 5</option>
-    </select>
-
-    <audio id="miAudio"></audio>
-
-    <div style="margin-top: 10px;">
-      <button id="playPauseBtn">Play</button>
-      <button id="loopBtn">Loop: OFF</button>
-      <button id="voicesBtn">Voices: OFF</button>
-    </div>
-
-    <div style="margin-top: 10px;">
-      <label for="volumen">Volume:</label>
-      <input type="range" id="volumen" min="0" max="1" step="0.01" value="1">
-    </div>
-
-    <div style="margin-top: 10px;">
-      <label>Time:</label>
-      <input type="range" id="progressBar" min="0" value="0" step="0.1">
-      <div id="timeDisplay">00:00 / 00:00</div>
-    </div>
-  </div>
-
-  <div class="card-icon">
-    <i class="fa-solid fa-music"></i>
-  </div>
-</div>
-        
     <script src="Script.js"></script>
         <script src="cAudio.js"></script>
     </body>
